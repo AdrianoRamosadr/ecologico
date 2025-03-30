@@ -1,0 +1,267 @@
+:root {
+    --primary-color: #2e7d32;
+    --secondary-color: #81c784;
+    --dark-color: #1b5e20;
+    --light-color: #e8f5e9;
+    --text-color: #333;
+    --text-light: #666;
+    --white: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.route-selector {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.mode-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    gap: 10px;
+}
+
+.mode-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.mode-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.route-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    grid-column: span 2;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+}
+
+.results {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.map-container {
+    position: relative;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    max-width: 250px;
+}
+
+.eco-tips {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.eco-tips h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.eco-tips ul {
+    list-style-position: inside;
+}
+
+.eco-tips li {
+    margin-bottom: 0.5rem;
+}
+
+.carbon-calculator {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.carbon-calculator h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.carbon-calculator p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.calculator-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: end;
+}
+
+.calc-result {
+    grid-column: span 2;
+    padding: 1rem;
+    background-color: var(--light-color);
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+footer .small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .route-form, .results, .calculator-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn-primary, .calc-result {
+        grid-column: span 1;
+    }
+    
+    .mode-selector {
+        flex-wrap: wrap;
+    }
+}
